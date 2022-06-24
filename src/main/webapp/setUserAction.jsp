@@ -33,10 +33,11 @@
             script.println("alert('이미존재하는 아이디입니다.')");
             script.println("history.back()");
             script.println("</script>");
-        } else {
-            PrintWriter script = response.getWriter();
+        }
+        else {
+            PrintWriter script=response.getWriter();
             script.println("<script>");
-            script.println("location.href=main.jsp");
+            script.println("location.href='main.jsp'");
             script.println("</script>");
         }
     }
