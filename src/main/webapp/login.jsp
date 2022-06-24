@@ -9,7 +9,9 @@
     <title>로그인 페이지</title>
     <style>
         body{
-            background:white;
+            background-image: url("img/image (2) (1).png");
+            background-position :center;
+            background-repeat: no-repeat;
         }
         h1{
             font-size: 50px;
@@ -87,6 +89,7 @@
             text-decoration-line: none;
             color: #B5B5B5;
         }
+
     </style>
 </head>
 <body>
@@ -102,7 +105,7 @@
         </div>
         <div class="passwardbox">
             <i id="pass" class="fa-solid fa-lock"></i>
-            <input class="passward" type="text" name="userPassward">
+            <input class="passward" type="text" name="userPassward"minlength="4">
         </div>
         <div class="loginbt">
             <input class="push" type="submit" value="로그인">

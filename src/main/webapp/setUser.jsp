@@ -8,6 +8,11 @@
     <link rel="Styleseet" href="Style.css">
     <title>회원가입</title>
     <style>
+        body{
+            background-image:  url("img/image (2) (1).png");
+            background-position: center;
+            background-repeat:no-repeat;
+        }
         *{
             margin: 0%;
         }
@@ -70,7 +75,7 @@
             <input type="text" value="아이디" id="idinput" name="userID">
         </div>
         <div id=passward>
-            <input type="text" value="비밀번호"id="psinput" name="userPassward">
+            <input type="text" value="비밀번호"id="psinput" name="userPassward" minlength="4">
         </div>
         <div id="name">
             <input type="text" value="이름"id="nameinput" name="userName" >
@@ -79,7 +84,7 @@
             <input type="text" value="성별"id="genderinput" name="userGender">
         </div>
         <div id="email">
-            <input type="text" value="이메일"id="mailinput" name="userEmail">
+            <input type="text" value="이메일"id="mailinput" name="userEmail" minlength="10">
         </div>
         <div class="makebt">
             <input type="submit" value="계정만들기" id="inputbt">
