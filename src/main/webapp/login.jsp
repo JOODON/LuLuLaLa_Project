@@ -95,7 +95,7 @@
 </header>
 
 <div class="container">
-    <form action="main.jsp">
+    <form action="loginAction.jsp">
         <div class="idbox">
             <i id="id" class="fa-regular fa-user"></i>
             <input class="id" type="text" name="userID">

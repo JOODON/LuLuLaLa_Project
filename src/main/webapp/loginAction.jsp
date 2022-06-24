@@ -3,9 +3,9 @@
 <%@ page import="USER.userDAO" %>
 <%@ page import="java.io.PrintWriter" %>
 <%request.setCharacterEncoding("UTF-8");%>
-<jsp:useBean id="user" class="USER.user" scope="page"></jsp:useBean>
-<jsp:setProperty name="user" property="userID"></jsp:setProperty>
-<jsp:setProperty name="user" property="userPassward"></jsp:setProperty>
+<jsp:useBean id="USER" class="USER.user" scope="page"/>
+<jsp:setProperty name="USER" property="userID"/>
+<jsp:setProperty name="USER" property="userPassward"/>
 <html>
 <head>
     <title>Title</title>
@@ -14,7 +14,7 @@
 <body>
     <%
         userDAO userDAO=new userDAO();
-        int result=userDAO.login(user.getUserID(), user.getUserPassward());
+        int result = userDAO.login(USER.getUserID(), USER.getUserPassward());
         if(result==1){
             PrintWriter script=response.getWriter();
             script.println("<script>");

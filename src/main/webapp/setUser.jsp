@@ -65,21 +65,21 @@
     <h1 class="set_user">회원가입</h1>
 </div>
 <div class="container">
-    <form action="login.jsp">
+    <form action="setUserAction.jsp">
         <div id="id">
-            <input type="text" value="아이디" id="idinput">
+            <input type="text" value="아이디" id="idinput" name="userID">
         </div>
         <div id=passward>
-            <input type="text" value="비밀번호"id="psinput">
+            <input type="text" value="비밀번호"id="psinput" name="userPassward">
         </div>
         <div id="name">
-            <input type="text" value="이름"id="nameinput">
+            <input type="text" value="이름"id="nameinput" name="userName" >
         </div>
         <div id="gender">
-            <input type="text" value="성별"id="genderinput">
+            <input type="text" value="성별"id="genderinput" name="userGender">
         </div>
         <div id="email">
-            <input type="text" value="이메일"id="mailinput">
+            <input type="text" value="이메일"id="mailinput" name="userEmail">
         </div>
         <div class="makebt">
             <input type="submit" value="계정만들기" id="inputbt">
