@@ -9,8 +9,9 @@
     <title>로그인 페이지</title>
     <style>
         body{
-            background-image: url("img/image (2) (1).png");
+            background-image: url("img/파스텔 배경.jpg");
             background-position :center;
+            background-size: cover;
             background-repeat: no-repeat;
         }
         h1{
@@ -24,6 +25,7 @@
             height: 320px;
             margin:0 auto;
             border-radius: 32px;
+            background: #f8f5f5;
         }
         header{
             display:flex;

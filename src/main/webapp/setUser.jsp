@@ -9,7 +9,7 @@
     <title>회원가입</title>
     <style>
         body{
-            background-image:  url("img/image (2) (1).png");
+            background-image:  url("img/파스텔 배경.jpg");
             background-position: center;
             background-repeat:no-repeat;
         }
@@ -50,6 +50,7 @@
             height: 400px;
             margin: auto;
             margin-top: 20px;
+            background: #f8f5f5;
         }
         .makebt{
             display: flex;
