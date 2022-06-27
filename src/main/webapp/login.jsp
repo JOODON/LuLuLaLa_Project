@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width",initial-scale="1">
     <script src="https://kit.fontawesome.com/f696815b8c.js" crossorigin="anonymous"></script>
     <title>로그인 페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <style>
         body{
-            background-image: url("img/파스텔 배경.jpg");
-            background-position :center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background: #F7F8E3;
         }
         h1{
             font-size: 50px;
             color:#EEE3F8;
-            margin-top: 100px
+            margin-top: 100px;
+            font-family: 'Titan One', cursive;
         }
         .container{
             border: 1px solid #B5B5B5;
@@ -25,7 +27,7 @@
             height: 320px;
             margin:0 auto;
             border-radius: 32px;
-            background: #f8f5f5;
+            background: #ffffff;
         }
         header{
             display:flex;
@@ -76,6 +78,7 @@
             display:flex;
             justify-content: center;
             margin-top:15px;
+            font-family: 'Black Han Sans', sans-serif;
         }
 
         #id,#pass{
@@ -86,6 +89,7 @@
             display: flex;
             justify-content:center;
             margin-top: 30px;
+            font-family: 'Black Han Sans', sans-serif;
         }
         a{
             text-decoration-line: none;

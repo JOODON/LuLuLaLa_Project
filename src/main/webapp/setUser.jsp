@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Styleseet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <title>회원가입</title>
     <style>
         body{
-            background-image:  url("img/파스텔 배경.jpg");
-            background-position: center;
-            background-repeat:no-repeat;
+            background: #F7F8E3;
         }
         *{
             margin: 0%;
@@ -22,6 +24,7 @@
             margin-top: 150px;
             color: #D7BFE6;
             font-size: 10px;
+            font-family: 'Titan One', cursive;
 
         }
         .user{
@@ -29,6 +32,7 @@
             justify-content: center;
             color: #D7BFE6;
             font-size: 30px;
+
         }
         input{
             width: 450px;
@@ -42,6 +46,7 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            font-family: 'Black Han Sans', sans-serif;
         }
         .container{
             border: 1px solid #B5B5B5;
@@ -50,7 +55,7 @@
             height: 400px;
             margin: auto;
             margin-top: 20px;
-            background: #f8f5f5;
+            background: #ffffff;
         }
         .makebt{
             display: flex;
