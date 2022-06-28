@@ -15,7 +15,7 @@
     <title>로그인 페이지</title>
     <style>
         header{
-            border: solid 15px #EEE3F8;
+            border: solid 3px #EEE3F8;
             border-radius: 17px;
             height: 100px;
         }

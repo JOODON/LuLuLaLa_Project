@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             font-size: 32px;
-            border: 13px solid #EEE3F8;
+            border: 3px solid #EEE3F8;
             color: #EEE3F8;
             border-radius: 15px;
         }
@@ -46,17 +46,20 @@
         }
         .link{
             margin-top: 10px;
-            border: 10px solid #F7F8E3;
+            border: 5px solid #F7F8E3;
             height: 40px;
             border-radius: 15px;
         }
         .text{
-            height: 500px;
+            height: 600px;
+            width: 800px;
             display: flex;
             justify-content: center;
-            border: 8px solid #B5B5B5;
-            margin-top: 20px;
+            border: 5px solid #B5B5B5;
             border-radius: 15px;
+            margin: auto;
+            margin-top: 30px;
+
         }
     </style>
 </head>
