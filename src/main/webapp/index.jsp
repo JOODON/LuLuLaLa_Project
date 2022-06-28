@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    location.href="login.jsp"
+    location.href="homepage.jsp"
 </script>
 </body>
 </html>

@@ -91,6 +91,12 @@
     </style>
 </head>
 <body>
+<%
+    String userID=null;
+    if (session.getAttribute("userID")!= null){
+        userID=(String) session.getAttribute("userID");
+    }
+%>
 <header>
     <ul class="header">
         <li class="title">LuLuLaLa게시판</li>
@@ -117,9 +123,15 @@
         </table>
     </div>
 </div>
+<%
+    if(userID != null){
+
+%>
 <a class="bton" href="#">
     <input class="bt" type="submit" value="글쓰기"/>
 </a>
-
+<%
+    }
+%>
 </body>
 </html>
