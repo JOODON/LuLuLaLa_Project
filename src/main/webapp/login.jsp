@@ -107,11 +107,11 @@
     <form action="loginAction.jsp">
         <div class="idbox">
             <i id="id" class="fa-regular fa-user"></i>
-            <input class="id" type="text" name="userID">
+            <input class="id" type="text" name="userID" placeholder="아이디">
         </div>
         <div class="passwardbox">
             <i id="pass" class="fa-solid fa-lock"></i>
-            <input class="passward" type="text" name="userPassward"minlength="4">
+            <input class="passward" type="text" name="userPassward"minlength="4" placeholder="비밀번호">
         </div>
         <div class="loginbt">
             <input class="push" type="submit" value="로그인">
