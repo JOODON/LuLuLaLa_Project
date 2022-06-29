@@ -13,11 +13,11 @@ public class BBSDAO {
 
     public BBSDAO() {
         try {
-            String dburl="jdbc:mysql://localhost:3307/bbs";
-            String dbID="root";
-            String dbpassward="kkjjss103@";
+            String dburl="jdbc:mysql://localhost:3307/bbs";//database my sql에 접근시켜주는 부분
+            String dbID="root";//아이디 그냥 루트로 통일됨 ? 만들떄는 다 통일되는거 같더라구
+            String dbpassward="kkjjss103@";//비밀번호
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(dburl,dbID,dbpassward);
+            conn = DriverManager.getConnection(dburl,dbID,dbpassward);// 컨이라는 객체 안에다가 우리가 만든걸 다 넣어줌
         }catch (Exception e){
             e.printStackTrace();
         }
