@@ -66,12 +66,12 @@
     <header>
         <h1>게시판 글쓰기 양식</h1>
     </header>
-    <form>
+    <form action="writeAction.jsp">
         <div class="title">
-            <input type="text" name="usertitle" class="texthead" placeholder="글내용" >
+            <input type="text" name="bbsTitle" class="texthead" placeholder="글내용" >
         </div>
         <div class="text">
-            <textarea type="text" name="usertext" class="textbody" placeholder="글 내용"></textarea>
+            <textarea type="text" name="bbsContent" class="textbody" placeholder="글 내용"></textarea>
         </div>
         <div class="bt">
             <input class="buttom" type="submit" value="글쓰기"/>
