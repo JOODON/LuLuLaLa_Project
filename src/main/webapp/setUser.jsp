@@ -78,22 +78,22 @@
 <div class="container">
     <form action="setUserAction.jsp">
         <div id="id">
-            <input type="text" value="아이디" id="idinput" name="userID">
+            <input type="text" placeholder="아이디" id="idinput" name="userID">
         </div>
         <div id=passward>
-            <input type="text" value="비밀번호"id="psinput" name="userPassward" minlength="4">
+            <input type="text" placeholder="비밀번호"id="psinput" name="userPassward" minlength="4">
         </div>
         <div id="name">
-            <input type="text" value="이름"id="nameinput" name="userName" >
+            <input type="text" placeholder="이름"id="nameinput" name="userName" >
         </div>
         <div id="gender">
-            <input type="text" value="성별"id="genderinput" name="userGender">
+            <input type="text" placeholder="성별"id="genderinput" name="userGender">
         </div>
         <div id="email">
-            <input type="text" value="이메일"id="mailinput" name="userEmail" minlength="10">
+            <input type="text" placeholder="이메일"id="mailinput" name="userEmail" minlength="10">
         </div>
         <div class="makebt">
-            <input type="submit" value="계정만들기" id="inputbt">
+            <input type="submit" placeholder="계정만들기" id="inputbt">
         </div>
     </form>
 </div>

@@ -127,7 +127,7 @@
     if(userID != null){
 
 %>
-<a class="bton" href="#">
+<a class="bton" href="write.jsp">
     <input class="bt" type="submit" value="글쓰기"/>
 </a>
 <%
