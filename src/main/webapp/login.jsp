@@ -15,10 +15,12 @@
         body{
             background: #F7F8E3;
         }
-        h1{
+        .title{
+            margin-top: 100px;
+        }
+        .h1{
             font-size: 50px;
             color:#EEE3F8;
-            margin-top: 100px;
             font-family: 'Titan One', cursive;
         }
         .container{
@@ -100,7 +102,7 @@
 </head>
 <body>
 <header>
-    <h1>LuLuLaLa</h1>
+    <h1 class="title"><a class="h1" href="homepage.jsp">LuLuLaLa</a></h1>
 </header>
 
 <div class="container">

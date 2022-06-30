@@ -71,8 +71,8 @@
         .bton{
             display: flex;
             justify-content: right;
-            margin-top: -20px;
-            margin-right: 330px;
+            margin-top: -40px;
+            margin-right: 10%;
         }
         bton{
             text-underline:none;
@@ -90,7 +90,7 @@
             border: 15px solid #F7F8E3;
             height: 800px;
             width: 830px;
-            border-radius: 20px;
+            border-radius: 30px;
         }
         a{
             list-style: none;
@@ -103,9 +103,9 @@
             width: 100px;
             display: flex;
             justify-content: center;
-            margin-left: 330px;
+            margin-left: 10%;
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -122,7 +122,7 @@
 %>
 <header>
     <ul class="header">
-        <li class="title">LuLuLaLa게시판</li>
+        <li class="t1"><a class="title" href="homepage.jsp">LuLuLaLa게시판</a></li>
     </ul>
 </header>
 <div class="container">
@@ -141,36 +141,35 @@
             ArrayList<BBS> list =bbsdao.getList(pageNumber);
             for (int i=0; i< list.size(); i++){
 
-
         %>
             <tr>
                 <td class="td1" width="100"><p><%= list.get(i).getBbsID() %></p></td>
                 <td height="40" width="300" class="td2"><p><a href="view.jsp?bbsID=<%= list.get(i).getBbsID()%>" > <%= list.get(i).getBbsTitle()%> </a></p></td>
                 <td class="td3" width="200"><p><%=list.get(i).getUserID()%></p></td>
-                <td class="td4" width="200"><p><%= list.get(i).getBbsDate().substring(11,13)+"시"+ list.get(i).getBbsDate().substring(14,16)+ "분" %></p></td>
+                <td class="td4" width="200"><p><%= list.get(i).getBbsDate().substring(0,11)+ list.get(i).getBbsDate().substring(11,13)+"시" + list.get(i).getBbsDate().substring(14,16)+ "분" %></p></td>
+            </tr>
         <%
             }
         %>
-            </tr>
         </table>
     </div>
-</div>
+
 <%
     if (pageNumber !=1){
 
 %>
-<a href="main.jsp?.pageNumber=<%= pageNumber - 1 %>"class="btn-left"> 이전 </a>
+<a href="main.jsp?pageNumber=<%= pageNumber - 1 %>"class="btn-left"> <p> 이전 </p></a>
 <%
     }if (bbsdao.nextPage(pageNumber+1)){
 %>
-<a href="main.jsp?.pageNumber=<%= pageNumber + 1 %>"class="btn-right"> 다음 </a>
+<a href="main.jsp?pageNumber=<%= pageNumber + 1 %>"class="btn-right"> <p> 다음 </p> </a>
 <%
     }if(userID != null){
 
 %>
-<a class="bton" href="write.jsp">
-    <input class="bt" type="submit" value="글쓰기"/>
-</a>
+<div class="bton" >
+    <a href="write.jsp"><input class="bt" type="button" value="글쓰기"/></a>
+</div>
 <%
     }
 %>
