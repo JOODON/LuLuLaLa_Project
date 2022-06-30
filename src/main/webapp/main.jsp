@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.io.PrintWriter"%>
+<%@ page import="bbs.BBSDAO" %>
+<%@ page import="bbs.BBS"%>
+<%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +71,7 @@
         .bton{
             display: flex;
             justify-content: right;
-            margin-top: 20px;
+            margin-top: -20px;
             margin-right: 330px;
         }
         bton{
@@ -84,9 +88,24 @@
             margin: auto;
             margin-top: 100px;
             border: 15px solid #F7F8E3;
-            height: 500px;
+            height: 800px;
             width: 830px;
             border-radius: 20px;
+        }
+        a{
+            list-style: none;
+            color: black;
+        }
+        .btn-left,.btn-right{
+            background: #F7F8E3;
+            color: #ACABAB;
+            height: 45px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            margin-left: 330px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -95,6 +114,10 @@
     String userID=null;
     if (session.getAttribute("userID")!= null){
         userID=(String) session.getAttribute("userID");
+    }
+    int pageNumber=1;
+    if(request.getParameter("pageNumber") != null ){
+        pageNumber=Integer.parseInt(request.getParameter("pageNumber"));
     }
 %>
 <header>
@@ -113,18 +136,36 @@
             <th width="300">제목</th>
             <th width="200">작성자</th>
             <th width="200">작성일</th>
+        <%
+            BBSDAO bbsdao=new BBSDAO();
+            ArrayList<BBS> list =bbsdao.getList(pageNumber);
+            for (int i=0; i< list.size(); i++){
 
+
+        %>
             <tr>
-                <td class="td1" width="100"><p>1</p></td>
-                <td height="40" width="300" class="td2"><p>자기 소개 글</p></td>
-                <td class="td3" width="200"><p>주동호</p></td>
-                <td class="td4" width="200"><p>2022.06.27</p></td>
+                <td class="td1" width="100"><p><%= list.get(i).getBbsID() %></p></td>
+                <td height="40" width="300" class="td2"><p><a href="view.jsp?bbsID=<%= list.get(i).getBbsID()%>" > <%= list.get(i).getBbsTitle()%> </a></p></td>
+                <td class="td3" width="200"><p><%=list.get(i).getUserID()%></p></td>
+                <td class="td4" width="200"><p><%= list.get(i).getBbsDate().substring(11,13)+"시"+ list.get(i).getBbsDate().substring(14,16)+ "분" %></p></td>
+        <%
+            }
+        %>
             </tr>
         </table>
     </div>
 </div>
 <%
-    if(userID != null){
+    if (pageNumber !=1){
+
+%>
+<a href="main.jsp?.pageNumber=<%= pageNumber - 1 %>"class="btn-left"> 이전 </a>
+<%
+    }if (bbsdao.nextPage(pageNumber+1)){
+%>
+<a href="main.jsp?.pageNumber=<%= pageNumber + 1 %>"class="btn-right"> 다음 </a>
+<%
+    }if(userID != null){
 
 %>
 <a class="bton" href="write.jsp">
