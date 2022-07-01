@@ -48,6 +48,7 @@
             border: 6px solid #d6d2ee;
             width: 830px;
             margin: auto;
+            margin-top: 140px;
             border-radius: 10px;
         }
         .bt{

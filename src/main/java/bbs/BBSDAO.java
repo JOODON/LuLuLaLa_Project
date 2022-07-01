@@ -102,4 +102,25 @@ public class BBSDAO {
         }
         return false;//데이터 베이스 오류
     }
+    public BBS getBBS(int bbsID){
+        String SQL="SELECT *F ROM BBS WHERE bbsID ? ";
+        try {
+            PreparedStatement pstmt =conn.prepareStatement(SQL);
+            pstmt.setInt(1,bbsID);
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                BBS bbs =new BBS();
+                bbs.setBbsID(rs.getInt(1));
+                bbs.setBbsTitle(rs.getString(2));
+                bbs.setUserID(rs.getString(3));
+                bbs.setBbsDate(rs.getString(4));
+                bbs.setBbsContent(rs.getString(5));
+                bbs.setBbsAvailable(rs.getInt(6));
+                return bbs;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;//데이터 베이스 오류
+    }
 }
