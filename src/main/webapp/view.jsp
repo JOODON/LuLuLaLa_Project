@@ -21,48 +21,7 @@
       justify-content: center;
       color: #EEE3F8;
     }
-    .title{
-      display: flex;
-      justify-content: center;
-    }
-    .text{
-      display: flex;
-      justify-content: center;
-    }
-    .bt{
-      display: flex;
-      justify-content: center;
-    }
-    .texthead{
-      margin-top: 30px;
-      width: 800px;
-      height: 50px;
-      border-radius: 3px;
-      border: 5px solid #F7F8E3;
 
-    }
-    .textbody{
-      width: 800px;
-      height: 600px;
-      margin-top: 30px;
-      border-radius: 3px;
-      border: 5px solid #F7F8E3;
-    }
-    .container{
-      border: 6px solid #d6d2ee;
-      width: 830px;
-      margin: auto;
-      border-radius: 10px;
-    }
-    .bt{
-
-      margin-top: 10px;
-    }
-    .buttom{
-      width: 800px;
-      border: 3px solid #ccc8ee;
-      background:#ffffff;
-    }
   </style>
 </head>
 <body>
@@ -86,19 +45,34 @@
 %>
 <div class="container">
   <header>
-    <h1>게시판 글쓰기 양식</h1>
+    <h1>게시판 글보기</h1>
   </header>
-  <form action="writeAction.jsp">
-    <div class="title">
-      <input type="text" name="bbsTitle" class="texthead" placeholder="글내용" >
-    </div>
-    <div class="text">
-      <textarea type="text" name="bbsContent" class="textbody" placeholder="글 내용"></textarea>
-    </div>
-    <div class="bt">
-      <input class="buttom" type="submit" value="글쓰기"/>
-    </div>
-  </form>
+  <tr>
+    <td>글 보기</td>
+    <td colspan="2" ><%= bbs.getBbsTitle() %></td>
+  </tr>
+  <tr>
+    <td>작성자</td>
+    <td colspan="2" ><%=bbs.getUserID()%></td>
+  </tr>
+  <tr>
+    <td>작성 일자</td>
+    <td colspan="2" ><%=bbs.getBbsDate().substring(0,11)+ bbs.getBbsDate().substring(11,13)+"시" + bbs.getBbsDate().substring(14,16)+ "분"%></td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td colspan="2" ><%=bbs.getBbsContent()%></td>
+  </tr>
+<a href="main.jsp"> 목록 </a>
+  <%
+    if( userID !=null && userID.equals(bbs.getUserID())){
+  %>
+      <a href="update.jsp?bbsID=<%= bbsID %>" > 수정</a>
+      <a href="delete.jsp?bbsID=<%= bbsID %>" > 삭제</a>
+  <%
+  }
+  %>
+
 </div>
 </body>
 </html>

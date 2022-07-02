@@ -17,7 +17,6 @@ public class BBSDAO {
             String dburl="jdbc:mysql://localhost:3307/bbs";//database my sql에 접근시켜주는 부분
             String dbID="root";//아이디 그냥 루트로 통일됨 ? 만들떄는 다 통일되는거 같더라구
             String dbpassward="kkjjss103@";//비밀번호
-            Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(dburl,dbID,dbpassward);// 컨이라는 객체 안에다가 우리가 만든걸 다 넣어줌
         }catch (Exception e){
             e.printStackTrace();
@@ -89,7 +88,7 @@ public class BBSDAO {
         return list;//데이터 베이스 오류
     }
     public boolean nextPage (int pageNumber){
-        String SQL="SELECT *FROM BBS WHERE bbsID <? AND bbsAvailable =1";
+        String SQL="SELECT * FROM BBS WHERE bbsID <? AND bbsAvailable =1";
         try {
             PreparedStatement pstmt =conn.prepareStatement(SQL);
             pstmt.setInt(1,getNext() - (pageNumber - 1 ) * 10);
@@ -103,7 +102,7 @@ public class BBSDAO {
         return false;//데이터 베이스 오류
     }
     public BBS getBBS(int bbsID){
-        String SQL="SELECT *F ROM BBS WHERE bbsID ? ";
+        String SQL="SELECT * FROM BBS WHERE bbsID =? ";
         try {
             PreparedStatement pstmt =conn.prepareStatement(SQL);
             pstmt.setInt(1,bbsID);
