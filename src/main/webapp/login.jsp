@@ -56,6 +56,7 @@
             margin-top:12px;
             margin-left: 14px;
         }
+
         .passwardbox{
             margin-top:12px;
             margin-left: 14px;

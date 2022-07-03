@@ -51,6 +51,7 @@ public class BBSDAO {
     }
     public int write(String bbsTitle,String userID,String bbsContent){
         String SQL="INSERT INTO BBS VALUES (?,?,?,?,?,?)";
+
         try {
             PreparedStatement pstmt =conn.prepareStatement(SQL);
             pstmt.setInt(1,getNext());

@@ -17,11 +17,67 @@
   <meta name="viewport" content="width=device-width",initial-scale="1">
   <style>
     h1{
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       color: #EEE3F8;
+      font-size: 40px;
     }
+    .container{
+      border: 5px solid #efe9af;
+      border-radius: 10px;
+      width: 800px;
+      height: 850px;
+      margin: auto;
+    }
+    .texthead{
+      border: 3px solid #EEE3F8;
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
 
+      margin-top: 40px;
+    }
+    p{
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ACABAB;
+    }
+    .textbody{
+      width: 700px;
+      height: 600px;
+
+      margin: auto;
+      border-radius: 10px;
+      margin-top: 70px;
+    }
+    .titlehead{
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      border: 3px solid #EEE3F8;
+
+    }
+    .titlebody{
+      display: flex;
+      justify-content: center;
+      border: 3px solid #f3f1ac;
+      border-radius: 10px;
+      height: 500px;
+      margin-top: 10px;
+    }
+    a{
+      text-decoration-line: none;
+      color: #ACABAB;
+    }
+    .button{
+      width: 400px;
+      display: flex;
+      justify-content:space-between;
+      margin: auto;
+      margin-top: -50px;
+    }
   </style>
 </head>
 <body>
@@ -43,27 +99,35 @@
   }
   BBS bbs = new BBSDAO().getBBS(bbsID);
 %>
-<div class="container">
+
   <header>
     <h1>게시판 글보기</h1>
   </header>
-  <tr>
-    <td>글 보기</td>
-    <td colspan="2" ><%= bbs.getBbsTitle() %></td>
-  </tr>
-  <tr>
-    <td>작성자</td>
-    <td colspan="2" ><%=bbs.getUserID()%></td>
-  </tr>
-  <tr>
-    <td>작성 일자</td>
-    <td colspan="2" ><%=bbs.getBbsDate().substring(0,11)+ bbs.getBbsDate().substring(11,13)+"시" + bbs.getBbsDate().substring(14,16)+ "분"%></td>
-  </tr>
-  <tr>
-    <td>내용</td>
-    <td colspan="2" ><%=bbs.getBbsContent()%></td>
-  </tr>
-<a href="main.jsp"> 목록 </a>
+
+  <div class="container">
+    <div class="texthead">
+      <h3>글 제목</h3>
+      <P><%= bbs.getBbsTitle() %></p>
+
+      <h3 class="textuser">작성자</h3>
+      <p><%=bbs.getUserID()%></p>
+
+      <h3 >작성 일자</h3>
+    <p><%=bbs.getBbsDate().substring(0,11)+ bbs.getBbsDate().substring(11,13)+"시" + bbs.getBbsDate().substring(14,16)+ "분"%></p>
+    </div>
+
+    <div class="textbody">
+      <div class="titlehead">
+        <h3>내용</h3>
+      </div>
+      <div class="titlebody">
+    <p><%=bbs.getBbsContent()%></p>
+    </div>
+  </div>
+</div>
+
+<div class="button">
+      <a href="main.jsp"> 목록 </a>
   <%
     if( userID !=null && userID.equals(bbs.getUserID())){
   %>
@@ -73,6 +137,7 @@
   }
   %>
 
+  </div>
 </div>
 </body>
 </html>
