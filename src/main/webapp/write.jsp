@@ -12,6 +12,11 @@
     <meta http-equiv="Content-Type" contant="text/html"; charset="UTF-8">
     <meta name="viewport" content="width=device-width",initial-scale="1">
     <style>
+        body{
+            background:url("img/게시판 메인배경.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         h1{
             display: flex;
             justify-content: center;
@@ -35,6 +40,7 @@
             height: 50px;
             border-radius: 3px;
             border: 5px solid #F7F8E3;
+            background: #fcf9f9;
 
         }
         .textbody{
@@ -43,6 +49,7 @@
             margin-top: 30px;
             border-radius: 3px;
             border: 5px solid #F7F8E3;
+            background: #fcf9f9;
         }
         .container{
             border: 6px solid #d6d2ee;
@@ -50,6 +57,7 @@
             margin: auto;
             margin-top: 140px;
             border-radius: 10px;
+            background: #fcf9f9;
         }
         .bt{
 
@@ -58,7 +66,7 @@
         .buttom{
             width: 800px;
             border: 3px solid #ccc8ee;
-            background:#ffffff;
+            background: #fcf9f9;
         }
     </style>
 </head>

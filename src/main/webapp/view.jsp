@@ -16,6 +16,11 @@
   <meta http-equiv="Content-Type" contant="text/html"; charset="UTF-8">
   <meta name="viewport" content="width=device-width",initial-scale="1">
   <style>
+    body{
+      background:url("img/게시판 메인배경.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
     h1{
       margin-top: 30px;
       display: flex;
@@ -24,11 +29,12 @@
       font-size: 40px;
     }
     .container{
-      border: 5px solid #efe9af;
+      border: 3px solid #efe9af;
       border-radius: 10px;
       width: 800px;
       height: 850px;
       margin: auto;
+      background: #fcf9f9;
     }
     .texthead{
       border: 3px solid #EEE3F8;

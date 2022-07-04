@@ -18,10 +18,16 @@
     <script src="https://kit.fontawesome.com/f696815b8c.js" crossorigin="anonymous"></script>
     <title>로그인 페이지</title>
     <style>
+        body{
+            background:url("img/게시판 메인배경.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         header{
             border: solid 3px #EEE3F8;
             border-radius: 17px;
             height: 100px;
+            background: #fcf9f9;
         }
         .header{
             font-size: 50px;
@@ -87,10 +93,11 @@
         .container{
             margin: auto;
             margin-top: 100px;
-            border: 15px solid #F7F8E3;
+            border: 8px solid #F7F8E3;
             height: 800px;
             width: 830px;
             border-radius: 30px;
+            background: #fcf9f9;
         }
         a{
             list-style: none;
