@@ -107,7 +107,7 @@
   <div class="container">
     <div class="texthead">
       <h3>글 제목</h3>
-      <P><%= bbs.getBbsTitle() %></p>
+      <P><%= bbs.getBbsTitle().replaceAll(" ", " &nbsp").replaceAll("<", " &lt;").replaceAll("<", " &gt;").replaceAll("\n", "</br>") %></p>
 
       <h3 class="textuser">작성자</h3>
       <p><%=bbs.getUserID()%></p>
@@ -121,7 +121,7 @@
         <h3>내용</h3>
       </div>
       <div class="titlebody">
-    <p><%=bbs.getBbsContent()%></p>
+    <p><%=bbs.getBbsContent().replaceAll(" ", " &nbsp").replaceAll("<", " &lt;").replaceAll("<", " &gt;").replaceAll("\n", "</br>")%></p>
     </div>
   </div>
 </div>
@@ -132,7 +132,7 @@
     if( userID !=null && userID.equals(bbs.getUserID())){
   %>
       <a href="update.jsp?bbsID=<%= bbsID %>" > 수정</a>
-      <a href="delete.jsp?bbsID=<%= bbsID %>" > 삭제</a>
+      <a onclick="return confirm(`정말로 삭제하시겠습니까?`)"href="deleteAction.jsp?bbsID=<%= bbsID %>" > 삭제</a>
   <%
   }
   %>

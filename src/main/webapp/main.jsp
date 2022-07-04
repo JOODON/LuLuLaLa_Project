@@ -144,7 +144,7 @@
         %>
             <tr>
                 <td class="td1" width="100"><p><%= list.get(i).getBbsID() %></p></td>
-                <td height="40" width="300" class="td2"><p><a href="view.jsp?bbsID=<%= list.get(i).getBbsID()%>" > <%= list.get(i).getBbsTitle()%> </a></p></td>
+                <td height="40" width="300" class="td2"><p><a href="view.jsp?bbsID=<%= list.get(i).getBbsID()%>" > <%= list.get(i).getBbsTitle().replaceAll(" ", " &nbsp").replaceAll("<", " &lt;").replaceAll("<", " &gt;").replaceAll("\n", "</br>")%> </a></p></td>
                 <td class="td3" width="200"><p><%=list.get(i).getUserID()%></p></td>
                 <td class="td4" width="200"><p><%= list.get(i).getBbsDate().substring(0,11)+ list.get(i).getBbsDate().substring(11,13)+"시" + list.get(i).getBbsDate().substring(14,16)+ "분" %></p></td>
             </tr>
