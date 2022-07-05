@@ -59,7 +59,7 @@
             border-radius: 15px;
             background: #fcf9f9;
         }
-        .text{
+        .texthead{
             height: 600px;
             width: 800px;
             display: flex;
@@ -67,9 +67,11 @@
             border: 5px solid #B5B5B5;
             border-radius: 15px;
             margin: auto;
-            margin-top: 30px;
+            margin-top: 70px;
             background: #fcf9f9;
-
+            font-size: 18px;
+            color: #ACABAB;
+            text-align: center;
         }
     </style>
 </head>
@@ -92,7 +94,7 @@
 
     %>
     <ul class="list">
-        <li class="list1"><a href="login.jsp"> 로그인</a></li>
+        <li class="list1"><a href="login.jsp"> 로그인 </a></li>
         <li class="list2"><a href="setUser.jsp"> 회원가입 </a></li>
     </ul>
 </div>
@@ -108,26 +110,9 @@
     }
 %>
 <div class="text">
-    <div class="textbody">
-    <p>안녕하세요! 6월 20일 부터  지금 7월 4일까지 총 14일 약 2주에 거친 포트폴리오를 만들었습니다.
-        <br>
-    처음에는 그냥 가볍게 생각하고 만들었었는데 생각보다 데이터베이스 관련해서 다루기가 어렵더라고요
-        <br>
-     데이터 베이스를 구축하는거 부터 시작해서 Tomcat으로 서버 돌리기 그리고 이클리스 강의만 올라와 있어서
-        <br>
-        강의를 보고 이해하며 인텔리제이라는 개발툴에서 사용하는게 생각보다 어려웠고 이렇게 간단한 게시판이라도
-        <br>
-        되게 많은 기능이 들어가고 그 기능들을 구축하기 위하여 많은 노력이 필요하단느걸 알았습니다.
-        <br>
-        앞으로의 공부 계획은 팀플로 코딩 강의 사이트를 한번 더 만들어 볼 생각입니다.
-        <br>
-        웹 디자인도 배워야될거같고.. JSP로 구축을 해봤기 때문에 스프링으로 넘어가서
-        <br>
-        더 배워야될거 같습니다. 서블릿도 공부할거구 할게 너무 많지만 하나하나씩 하면서
-        <br>
-        노력 하며 배워야 될거같습니다.!!
-    </p>
-    </div>
+        <div class="texthead">
+           <h3>LuLuLaLa프로젝트</h3>
+        </div>
 
 </div>
 </body>
