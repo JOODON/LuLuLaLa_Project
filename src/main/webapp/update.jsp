@@ -107,11 +107,10 @@
             script.println("alert('권한이 없습니다.')");
             script.println("location.href=maim.jsp()");
             script.println("</script>");
-        }
+    }
 
     %>
-
-<div class="container">
+    <div class="container">
     <header>
         <h1>게시판 수정 양식</h1>
     </header>
