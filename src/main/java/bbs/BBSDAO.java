@@ -51,7 +51,6 @@ public class BBSDAO {
     }
     public int write(String bbsTitle,String userID,String bbsContent){
         String SQL="INSERT INTO BBS VALUES (?,?,?,?,?,?)";
-
         try {
             PreparedStatement pstmt =conn.prepareStatement(SQL);
             pstmt.setInt(1,getNext());
@@ -123,6 +122,7 @@ public class BBSDAO {
         }
         return null;//데이터 베이스 오류
     }
+
     public int update(int bbsID,String bbsTitle,String bbsContent){
         String SQL="UPDATE BBS SET bbsTitle =? ,bbsContent =? WHERE bbsID=?";
         try {

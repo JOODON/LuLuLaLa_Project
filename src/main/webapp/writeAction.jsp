@@ -6,6 +6,7 @@
 <jsp:useBean id="bbs" class="bbs.BBS" scope="page"/>
 <jsp:setProperty name="bbs" property="bbsTitle"/>
 <jsp:setProperty name="bbs" property="bbsContent"/>
+
 <html>
 <head>
     <title>Title</title>
@@ -13,6 +14,7 @@
 <body>
 <%
         String userID=null;
+
         if (session.getAttribute("userID")!=null){
             userID=(String) session.getAttribute("userID");
         }

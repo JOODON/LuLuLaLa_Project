@@ -30,7 +30,7 @@ public class userDAO {
                 }
                 else
                     return 0;
-            }
+                }
             return -1;
         }
         catch (Exception e) {
@@ -38,6 +38,7 @@ public class userDAO {
         }
         return -2;
     }
+
     public int join(user user){
         String SQL="INSERT INTO USER VALUES(?,?,?,?,?) ";
         try {
